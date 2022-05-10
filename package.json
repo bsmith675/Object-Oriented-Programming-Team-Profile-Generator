@@ -1,0 +1,30 @@
+{
+    "name": "team-profile-generator",
+    "version": "1.0.0",
+    "description": "homework",
+    "main": "index.js",
+    "directories": {
+      "lib": "lib",
+      "test": "tests"
+    },
+    "dependencies": {
+      "inquirer": "^8.0.0"
+    },
+    "devDependencies": {},
+    "scripts": {
+      "start": "node index.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https:
+    },
+    "keywords": [
+      "profile-generator"
+    ],
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+      "url": ""
+    },
+    "homepage": ""
+  }
