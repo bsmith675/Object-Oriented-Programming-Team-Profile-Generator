@@ -109,3 +109,57 @@ const internQuestion = [
         name: "internSchool",
     },
 ];
+
+function managerAnswers(){
+    inquirer.prompt(managerQuestions).then(data => {
+        const manager = new Manager(data.managerName, data.managerId, data.managerEmail, data.managerOffice);
+        writeManager(html, generateHTML.createManager(manager))
+        console.log(teamInfo);
+    nextEmployee();
+    })
+};
+
+const nextEmployee = () => {
+    inquirer.prompt([
+        {
+            type: "list",
+            name: "nxtEmply",
+            message: "Would you like to add another Employee? (Engineer, Intern, or 'I am finished'?)",
+            choices: ["Engineer", "Intern", "I am finished."],
+        },
+    ]).then(data => {
+        const role = data.nxtEmply;
+        if (role === "Engineer") {
+            engineerAnswers();    
+        } else if (role === "Intern") {
+            internAnswers();
+        } else if (role === "I am finished.") {
+            appendEndHTML(html, generateHTML.endHTML());
+        }
+    });
+}
+
+function engineerAnswers(){
+    inquirer.prompt(engineerQuestions).then(data => {
+        const engineer = new Engineer(data.engineerName, data.engineerId, data.engineerEmail, data.engineerGithub);
+        console.log(teamInfo);
+
+    nextEmployee();
+    })
+};
+
+function internAnswers() {
+    inquirer.prompt(internQuestions).then(data => {
+        const intern = new Intern(data.internName, data.internId, data.internEmail, data.internSchool);
+        writeIntern(html, generateHTML.createIntern(intern))
+        console.log(teamInfo);
+    nextEmployee();
+    })
+};
+
+const init = () => {
+    writeTeamInfo(html, generateHTML.generateHTML());
+    managerAnswers();
+}
+
+init();
