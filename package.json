@@ -1,30 +1,30 @@
 {
-    "name": "team-profile-generator",
-    "version": "1.0.0",
-    "description": "homework",
-    "main": "index.js",
-    "directories": {
-      "lib": "lib",
-      "test": "tests"
-    },
-    "dependencies": {
-      "inquirer": "^8.0.0"
-    },
-    "devDependencies": {},
-    "scripts": {
-      "start": "node index.js"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https:
-    },
-    "keywords": [
-      "profile-generator"
-    ],
-    "author": "",
-    "license": "MIT",
-    "bugs": {
-      "url": ""
-    },
-    "homepage": ""
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "creates an HTML team profile",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bsmith675/Object-Oriented-Programming-Team-Profile-Generator.git"
+  },
+  "author": "Carlos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bsmith675/Object-Oriented-Programming-Team-Profile-Generator/issues"
+  },
+  "homepage": "",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
   }
+}
